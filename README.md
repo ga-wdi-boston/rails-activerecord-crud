@@ -5,13 +5,13 @@
 ## Instructions
 
 Fork and clone this repository, then
-
 ```bash
 $ cd rails-crud
 $ subl .
 $ cd rails_crud
 $ bundle install
 ```
+then close your laptop.
 
 ## Objectives
 
