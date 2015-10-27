@@ -8,7 +8,6 @@ Fork and clone this repository, then
 ```bash
 $ cd rails-crud
 $ subl .
-$ cd rails_crud
 $ bundle install
 ```
 then close your laptop.
@@ -51,18 +50,17 @@ ActiveRecord makes it easy to create objects that reference other objects (using
 
 We'll be using [PostgreSQL](http://www.postgresql.org/) as the [RDBMS](http://en.wikipedia.org/wiki/Relational_database_management_system) backing ActiveRecord.
 
-The Rails App we'll be using was created with the command `rails new --database=postgresql --skip-bundle --skip-sprockets --skip-spring --skip-javascript --skip-turbolinks --skip-test-unit rails_crud`.
+The Rails App we'll be using was created with the command `rails-api new --skip-sprockets --skip-spring --skip-javascript --skip-turbolinks --skip-test-unit --database=postgresql.`.
 
-We'll use `rails_crud_development` as the database to hold our tables and **[rails dbconsole](http://guides.rubyonrails.org/command_line.html#rails-dbconsole)** _(alias `rails db`)_ to interact with it with SQL.  By default, each Rails App is created to potentially use one of three databases, `<rails app name>_development`, `<rails app name>_test`, and `<rails app name>_production`.  We'll use **[rails console](http://guides.rubyonrails.org/command_line.html#rails-console)** _(alias `rails c`)_ to interactively use Models and **[rails runner](http://guides.rubyonrails.org/command_line.html#rails-runner)** _(alias `rails r`)_ to invoke any scripts we write.
+We'll use `rails-crud_development` as the database to hold our tables and **[rails dbconsole](http://guides.rubyonrails.org/command_line.html#rails-dbconsole)** _(alias `rails db`)_ to interact with it with SQL.  By default, each Rails App is created to potentially use one of three databases, `<rails app name>_development`, `<rails app name>_test`, and `<rails app name>_production`.  We'll use **[rails console](http://guides.rubyonrails.org/command_line.html#rails-console)** _(alias `rails c`)_ to interactively use Models and **[rails runner](http://guides.rubyonrails.org/command_line.html#rails-runner)** _(alias `rails r`)_ to invoke any scripts we write.
 
 ```bash
-$ cd rails_crud
 $ rails db
-psql: FATAL:  database "rails_crud_development" does not exist
+psql: FATAL:  database "rails-crud_development" does not exist
 $
 ```
 
-As we can see, `rails db` runs `psql`.  If the Rails App had been configured for a different database server, `rails db` would have started a different command line client.
+As we can see, `rails db` runs `psql`.  If the Rails app had been configured for a different database server, `rails db` would have started a different command line client.
 
 As before, we need to create the database.  We'll use the command line application **[rake](http://guides.rubyonrails.org/command_line.html#rake)** which Rails uses to manage changes to the structure of the database (among other things).
 
@@ -138,10 +136,7 @@ But we'll often want to use person.**[destroy](http://api.rubyonrails.org/classe
 
 We'll repeat the above for pets instead of people.
 
-First, let's come up with the columns we'll need.
-
 ## Lab
 
-One more time, in small groups, now for places.
+One more time, in small groups, now for cities then for people.
 
-Before you start, we'll come up with a starter set of columns.  Remember to keep it to data that can be stored in a single row.
