@@ -108,6 +108,8 @@ To insert a row we can create a script that uses `<Model>`.**[new](http://api.ru
 
 Let's add one person then see how we can add people in bulk.
 
+Adding records in bulk recommends a transaction to wrap the call to `create!`.  We'll set this up as a rake task to make it easier execute.
+
 ### Code along
 
 Together let's do the same for cities.
