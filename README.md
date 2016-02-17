@@ -59,7 +59,7 @@ The Rails App we'll be using was created with the command:
 rails-api new --skip-sprockets --skip-spring --skip-javascript --skip-turbolinks --skip-test-unit --database=postgresql.
 ```
 
-We'll use `rails-crud_development` as the database to hold our tables and **[rails dbconsole](http://guides.rubyonrails.org/command_line.html#rails-dbconsole)**
+We'll use `rails-activerecord-crud_development` as the database to hold our tables and **[rails dbconsole](http://guides.rubyonrails.org/command_line.html#rails-dbconsole)**
  _(alias `rails db`)_ to interact with it with SQL.
 By default, each Rails App is created to potentially use one of three databases,
  `<rails app name>_development`, `<rails app name>_test`,
@@ -74,7 +74,7 @@ We'll use **[rails console](http://guides.rubyonrails.org/command_line.html#rail
 
 ```bash
 $ rails db
-psql: FATAL:  database "rails-crud_development" does not exist
+psql: FATAL:  database "rails-activerecord-crud_development" does not exist
 $
 ```
 
