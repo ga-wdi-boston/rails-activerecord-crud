@@ -11,20 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027140422) do
+ActiveRecord::Schema.define(version: 20160218204820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cities", force: :cascade do |t|
-    t.string   "name"
     t.integer  "population"
+    t.string   "name"
     t.string   "country"
     t.string   "region"
-    t.float    "longitude"
-    t.float    "latitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.decimal  "longitude",  precision: 6, scale: 3
+    t.decimal  "latitude",   precision: 5, scale: 3
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "people", force: :cascade do |t|
@@ -33,18 +33,11 @@ ActiveRecord::Schema.define(version: 20151027140422) do
     t.string   "gender"
     t.integer  "height"
     t.integer  "weight"
-    t.date     "dob"
+    t.date     "born_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "pets", force: :cascade do |t|
-    t.string   "name"
-    t.string   "kind"
-    t.string   "string"
-    t.date     "dob"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "hair_color"
+    t.string   "eye_color"
   end
 
 end
