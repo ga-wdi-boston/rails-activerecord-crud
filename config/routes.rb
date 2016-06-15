@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :albums
+  resources :songs
+
+  # Provide from Rails Template
+
   resources :examples, except: [:new, :edit]
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
