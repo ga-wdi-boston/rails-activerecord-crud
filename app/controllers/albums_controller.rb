@@ -2,12 +2,13 @@
 class AlbumsController < ApplicationController
 
   def index
-    render json: albums
+    album = Album.all
+    render json: album
   end
 
   def show
     id = params[:id].to_i
-    render json: albums.find { |album| album[:id] == id }
+    render json: Album.find { |album| album[:id] == id }
   end
 
 end
