@@ -103,6 +103,33 @@ Rake is a task runner and `rake -T ` provides a brief description of the tasks
 rake -T db
 ```
 
+## Discussion: Model Album and Song
+
+To help us get a better idea of what should our database will consist of, let's
+model and **Album** and **Song**.
+
+## Demo: Creating a Album Model
+
+Let's take what we discussed in our Modeling exercise and see if we can make
+an Albums model.
+
+## Code-Along: Write a Song model
+
+Together lets take what we saw when creating the Album Model and use this to
+create a Song Model.
+
+## Demo: Generate a migration to create an Album table with columns
+
+## Lab: Generate migration for songs with appropriate columns
+
+## Demo: Use Album.all (you wrote this method previously) in AlbumsController#index and Album.find() in show
+
+## Lab: Same with Song.all
+
+## Demo: Make Album inherit from ActiveRecord and delete all code between class/end. Everything should still work.
+
+## Lab: Same with Song.
+
 ## Creating tables and ActiveRecord object to manipulate them
 
 We'll use the data in `data/*.csv` as representative of the data to be stored
