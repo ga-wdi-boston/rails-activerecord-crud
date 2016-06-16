@@ -1,5 +1,6 @@
 class Album # < ActiveRecord::Base
   attr_accessor :name, :artist
+  attr_reader :id
   @@collection = []
 
   def initialize(id:, name:, artist:)
@@ -16,7 +17,7 @@ class Album # < ActiveRecord::Base
   end
 
   def self.find(id)
-    @@collection.select { |album| album[:id] == id} #{ |album| album.id == params[:id] }
+    @@collection.select { |album| album.id == id.to_i}
   end
 end
 
